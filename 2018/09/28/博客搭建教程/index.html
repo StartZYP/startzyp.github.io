@@ -132,10 +132,22 @@
                 
                 
                 
-                <li class="">
-                    <a href="/categories">
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
                         <i class="fa fa-list"></i>分类
                     </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/博客搭建/">博客搭建</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
                 </li>
                 
                 
@@ -153,10 +165,6 @@
                         
                         <li>
                             <a href="/tags/博客搭建/">博客搭建</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/tags/博客日记/">博客日记</a>
                         </li>
                         
                         
@@ -202,9 +210,7 @@
             <span class="label label-gal">
                 <i class="fa fa-tags"></i>
                 
-                <a href="/tags/博客搭建/">博客搭建</a>, 
-                
-                <a href="/tags/博客日记/">博客日记</a>
+                <a href="/tags/博客搭建/">博客搭建</a>
                 
             </span>
             
@@ -233,9 +239,7 @@
                 
                 <i class="fa fa-tags"></i>
                 
-                <a href="/tags/博客搭建/">博客搭建</a>, 
-                
-                <a href="/tags/博客日记/">博客日记</a>
+                <a href="/tags/博客搭建/">博客搭建</a>
                 
                 
                 
@@ -255,7 +259,7 @@
 <h2 id="2-快速开始"><a href="#2-快速开始" class="headerlink" title="2.快速开始"></a>2.快速开始</h2><p>1.进入命令行找到要部署Blog的路径</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo i blog //init的缩写 blog是项目名</span><br><span class="line">cd blog //切换到站点根目录</span><br><span class="line">hexo g //generetor的缩写</span><br><span class="line">hexo s //server的缩写</span><br></pre></td></tr></table></figure>
 <p>2.打开浏览器输入localhost:4000查看：</p>
-<p><img src="C:\blog\themes\hexo-theme-gal\source\imgs\log\2018-9-28\preview5.jpg" alt=""></p>
+<p><img src="https://startzyp.github.io/imgs/log/2018-9-28/preview5.jpg" alt=""></p>
 <p>看到这个样子就说明成功了，这个就是hexo默认的博客主题。现在你已经可以在这个主题下写博客了。</p>
 <p>当然，我是不喜欢这样的，幸好，github上有大量的主题可供选择，这里我选择使用nexT主题。</p>
 <h2 id="3-选择主题–nexT"><a href="#3-选择主题–nexT" class="headerlink" title="3.选择主题–nexT"></a>3.选择主题–nexT</h2><h3 id="1-选择主题"><a href="#1-选择主题" class="headerlink" title="1.选择主题"></a>1.选择主题</h3><p>安装的过程就一行代码，你需要在博客根目录出打开命令行输入以下命令：</p>
@@ -266,14 +270,14 @@
 <p>在 站点根目录/themes/next/_congig.yml 文件中修改</p>
 <h2 id="4-将本地博客上传到github"><a href="#4-将本地博客上传到github" class="headerlink" title="4.将本地博客上传到github"></a>4.将本地博客上传到github</h2><p>进入github</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/ 甩个链接自己看着办</span><br></pre></td></tr></table></figure>
-<h3 id="1-创建一个新项目"><a href="#1-创建一个新项目" class="headerlink" title="1.创建一个新项目"></a>1.创建一个新项目</h3><p><img src="C:\blog\themes\hexo-theme-gal\source\imgs\log\2018-9-28\1.jpg" alt=""></p>
-<h3 id="2-按格式输入项目名称"><a href="#2-按格式输入项目名称" class="headerlink" title="2.按格式输入项目名称"></a>2.按格式输入项目名称</h3><p><img src="C:\blog\themes\hexo-theme-gal\source\imgs\log\2018-9-28\2.jpg" alt=""></p>
-<h3 id="3-点击设置-创建一个page"><a href="#3-点击设置-创建一个page" class="headerlink" title="3.点击设置 创建一个page"></a>3.点击设置 创建一个page</h3><p><img src="C:\blog\themes\hexo-theme-gal\source\imgs\log\2018-9-28\3.jpg" alt=""></p>
-<p><img src="C:\blog\themes\hexo-theme-gal\source\imgs\log\2018-9-28\4.jpg" alt=""></p>
-<p><img src="C:\blog\themes\hexo-theme-gal\source\imgs\log\2018-9-28\5.jpg" alt=""></p>
-<h3 id="4-选择一个主题，没什么用，反正马上就被覆盖掉了。"><a href="#4-选择一个主题，没什么用，反正马上就被覆盖掉了。" class="headerlink" title="4.选择一个主题，没什么用，反正马上就被覆盖掉了。"></a>4.选择一个主题，没什么用，反正马上就被覆盖掉了。</h3><p><img src="C:\blog\themes\hexo-theme-gal\source\imgs\log\2018-9-28\6.jpg" alt=""></p>
+<h3 id="1-创建一个新项目"><a href="#1-创建一个新项目" class="headerlink" title="1.创建一个新项目"></a>1.创建一个新项目</h3><p><img src="https://startzyp.github.io/imgs/log/2018-9-28/1.jpg" alt=""></p>
+<h3 id="2-按格式输入项目名称"><a href="#2-按格式输入项目名称" class="headerlink" title="2.按格式输入项目名称"></a>2.按格式输入项目名称</h3><p><img src="https://startzyp.github.io/imgs/log/2018-9-28/2.jpg" alt=""></p>
+<h3 id="3-点击设置-创建一个page"><a href="#3-点击设置-创建一个page" class="headerlink" title="3.点击设置 创建一个page"></a>3.点击设置 创建一个page</h3><p><img src="https://startzyp.github.io/imgs/log/2018-9-28/3.jpg" alt=""></p>
+<p><img src="https://startzyp.github.io/imgs/log/2018-9-28/4.jpg" alt=""></p>
+<p><img src="https://startzyp.github.io/imgs/log/2018-9-28/5.jpg" alt=""></p>
+<h3 id="4-选择一个主题，没什么用，反正马上就被覆盖掉了。"><a href="#4-选择一个主题，没什么用，反正马上就被覆盖掉了。" class="headerlink" title="4.选择一个主题，没什么用，反正马上就被覆盖掉了。"></a>4.选择一个主题，没什么用，反正马上就被覆盖掉了。</h3><p><img src="https://startzyp.github.io/imgs/log/2018-9-28/6.jpg" alt=""></p>
 <p>这个时候访问一下你的链接，应该可以看到效果</p>
-<h2 id="5-接下来将我们Hexo的代码部署到github上。"><a href="#5-接下来将我们Hexo的代码部署到github上。" class="headerlink" title="5.接下来将我们Hexo的代码部署到github上。"></a>5.接下来将我们Hexo的代码部署到github上。</h2><p><img src="C:\blog\themes\hexo-theme-gal\source\imgs\log\2018-9-28\7.png" alt=""></p>
+<h2 id="5-接下来将我们Hexo的代码部署到github上。"><a href="#5-接下来将我们Hexo的代码部署到github上。" class="headerlink" title="5.接下来将我们Hexo的代码部署到github上。"></a>5.接下来将我们Hexo的代码部署到github上。</h2><p><img src="https://startzyp.github.io/imgs/log/2018-9-28/7.png" alt=""></p>
 <p>改成这样就好了，记得保存 !注意！！！冒号的后面一定一定一定要有一个空格！！</p>
 <h2 id="6-安装部署插件"><a href="#6-安装部署插件" class="headerlink" title="6.安装部署插件"></a>6.安装部署插件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">//先装个插件压压惊</span><br><span class="line">hexo d  //  部署的命令</span><br><span class="line"></span><br><span class="line">//等一会就好了</span><br></pre></td></tr></table></figure>
 <h2 id="7-访问你的主页"><a href="#7-访问你的主页" class="headerlink" title="7.访问你的主页"></a>7.访问你的主页</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">StartZYP.github.io</span><br></pre></td></tr></table></figure>
@@ -415,9 +419,7 @@
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/博客搭建/" style="font-size: 14.889500154734854px;" class="tag-cloud-link">博客搭建</a>
-    
-    <a href="/tags/博客日记/" style="font-size: 19.630622720831006px;" class="tag-cloud-link">博客日记</a>
+    <a href="/tags/博客搭建/" style="font-size: 17.251068202230897px;" class="tag-cloud-link">博客搭建</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
