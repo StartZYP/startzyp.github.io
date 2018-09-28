@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="John Doe">
+    <meta name="author" content="StartZYP">
     
     
     
     
     
     
-    <title>Hello World | Hexo</title>
+    <title>Hello World | StartZYP_Blog_技术</title>
     <link href=”http://yoursite.com“ rel=”prefetch” />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -30,6 +30,14 @@
             }
         }
     </style>
+    
+    <script src="//cdn1.lncld.net/static/js/3.4.2/av-min.js"></script>
+    <script>
+      AV.init({
+        appId: 'w0k02IJD1YOeOFMj2tpgvSpt-gzGzoHsz',
+        appKey: 'vJApxz0wjak9hmwbpfGSI8bq'
+      })
+    </script>
     
     <!--<script type="text/javascript">
       if (document.images) {
@@ -97,7 +105,7 @@
                     }
                 </style>
                 <!-- 这里使用文字(navbar_text or config.title) -->
-                <div class="navbar-brand">Hexo</div>
+                <div class="navbar-brand">StartZYP_Blog_技术</div>
                 
             </a>
         </div>
@@ -160,7 +168,7 @@
 <article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
-        <a href="http://yoursite.com">Hexo</a>
+        <a href="http://yoursite.com">StartZYP_Blog_技术</a>
         >
         <span>Hello World</span>
     </div>
@@ -175,6 +183,10 @@
             
             <span class="label label-gal">
                 <i class="fa fa-calendar"></i> 2018-09-28
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
             </span>
             
         </div>
@@ -192,6 +204,8 @@
             </p>
             <p>
                 
+                
+                <i class="fa fa-eye"></i>
                 
             </p>
         </center>
@@ -229,7 +243,7 @@
     <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
         <div class="panel-heading" style="text-align: center">
             <i class="fa fa-quote-left"></i>
-            John Doe
+            StartZYP
             <i class="fa fa-quote-right"></i>
         </div>
         <div class="author-panel text-center">
@@ -253,6 +267,18 @@
 </aside>
     
     <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    <aside id="sidebar-hot_posts">
+    <div class="panel panel-gal hot hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-fire"></i>
+            最热文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
     
     
     <aside id="sidebar-recent_posts">
@@ -333,15 +359,11 @@
                 <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
     
     <li>
-        <a href="https://github.com/ZEROKISEKI/" target="_blank">Github</a>
+        <a href="https://github.com/StartZYP/" target="_blank">Github</a>
     </li>
     
     <li>
         <a href="https://coding.net/u/SORA1" target="_blank">Coding</a>
-    </li>
-    
-    <li>
-        <a href="https://www.zhihu.com/people/aonosora/activities" target="_blank">知乎</a>
     </li>
     
 </div>
@@ -355,7 +377,7 @@
     </div>
     <footer id="gal-footer">
     <div class="container">
-        Copyright © 2018 John Doe Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+        Copyright © 2018 StartZYP Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
     </div>
 </footer>
 
@@ -416,6 +438,12 @@
 
 <script src="/js/oni.js"></script>
 
+
+<script>
+    window.hot_posts_count = '10'
+    // window.use_leancloud = 'true'
+</script>
+<script src="/js/comment/leancloud.js"></script>
 
 
 </html>
