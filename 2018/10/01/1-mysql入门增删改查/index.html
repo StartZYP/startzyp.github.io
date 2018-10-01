@@ -12,7 +12,7 @@
     
     
     
-    <title>archive_a | StartZYP_Blog_技术</title>
+    <title>1.mysql入门增删改查 | StartZYP_Blog_技术</title>
     <link href=”https://startzyp.github.io“ rel=”prefetch” />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -123,7 +123,7 @@
                 
                 
                 
-                <li class="current">
+                <li class="">
                     <a href="/archives">
                         <i class="fa fa-archive"></i>归档
                     </a>
@@ -198,19 +198,38 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <article class="article well article-body" id="article-archive">
+                    
+<article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="https://startzyp.github.io">StartZYP_Blog_技术</a>
         >
-        <span>归档</span>
+        <span>1.mysql入门增删改查</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/archives">归档</a>
+                <a href="/2018/10/01/1-mysql入门增删改查/">1.mysql入门增删改查</a>
             </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/mysql/">mysql</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2018-10-01
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -218,39 +237,61 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/archives">归档</a>
+                    <a href="/2018/10/01/1-mysql入门增删改查/">1.mysql入门增删改查</a>
                 </h4>
             </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2018-10-01
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/mysql/">mysql</a>
+                
+                
+                
+                <i class="fa fa-eye"></i>
+                
+            </p>
         </center>
     </div>
-    <div class="content-article" style="margin-top: 30px;">
-        
-        
-            <h1 style="font-size: 24px; margin-top: 40px;">2018年</h1>
-            
-        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
-            
-             
-             
-                        <a href="/2018/10/01/1-mysql入门增删改查/">1.mysql入门增删改查</a>
-                        <br>
-            
-             
-                        <a href="/2018/09/28/科普向IC卡分类/">科普向IC卡分类</a>
-                        <br>
-            
-             
-                        <a href="/2018/09/28/博客搭建教程/">本地博客搭建教程</a>
-                        <br>
-            
-             
-                        <a href="/2018/09/28/hello-world/">Hello World</a>
-                        <br>
-            
-                    </div>
-        
+    <div class="content-article">
+        <p>砥砺前行,加油.国庆学习mysql。</p>
+<h1 id="1-数据库登录"><a href="#1-数据库登录" class="headerlink" title="1.数据库登录"></a>1.数据库登录</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -h -localhost -u root -p</span><br></pre></td></tr></table></figure>
+<p>然后就可以输入密码了</p>
+<p>如果不写-h 那么就直接默认localhost</p>
+<h1 id="2-基本操作mysql语句"><a href="#2-基本操作mysql语句" class="headerlink" title="2.基本操作mysql语句"></a>2.基本操作mysql语句</h1><p>显示数据库 (mysql语句一定要以分号结束)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure>
+<h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database php;</span><br></pre></td></tr></table></figure>
+<h2 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop database php;</span><br></pre></td></tr></table></figure>
+<h2 id="选中数据库"><a href="#选中数据库" class="headerlink" title="选中数据库"></a>选中数据库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use php;</span><br></pre></td></tr></table></figure>
+<h2 id="显示表"><a href="#显示表" class="headerlink" title="显示表"></a>显示表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show tables;</span><br></pre></td></tr></table></figure>
+<h2 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop table class;</span><br></pre></td></tr></table></figure>
+<h2 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create table class(</span><br><span class="line">    Student int,</span><br><span class="line">    name varchar(20),</span><br><span class="line">    age int,</span><br><span class="line">    area varchar(20),</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h2 id="修改表名字"><a href="#修改表名字" class="headerlink" title="修改表名字"></a>修改表名字</h2><p>表名可以改库名，不能.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RENAME table class to newclass;</span><br></pre></td></tr></table></figure>
+<h2 id="图形化描述一张表"><a href="#图形化描述一张表" class="headerlink" title="图形化描述一张表"></a>图形化描述一张表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">description class;</span><br></pre></td></tr></table></figure>
+<p>也可以缩写</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">desc class;</span><br></pre></td></tr></table></figure>
+<p>列出来表的信息</p>
+<h2 id="创建一个留言本"><a href="#创建一个留言本" class="headerlink" title="创建一个留言本"></a>创建一个留言本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create table msg(</span><br><span class="line">	id int,</span><br><span class="line">    title varchar(30),</span><br><span class="line">    name varchar(20),</span><br><span class="line">    content varchar(1000),</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h1 id="3-数据库增删改查语句"><a href="#3-数据库增删改查语句" class="headerlink" title="3.数据库增删改查语句"></a>3.数据库增删改查语句</h1><h2 id="插入留言"><a href="#插入留言" class="headerlink" title="插入留言"></a>插入留言</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert info msg(id,title,name,content) values (1,&apos;初来乍到&apos;,&apos;张三丰&apos;,&apos;我这条语言是留言哦&apos;);</span><br></pre></td></tr></table></figure>
+<h2 id="字符编码问题"><a href="#字符编码问题" class="headerlink" title="字符编码问题"></a>字符编码问题</h2><p>默认建表一般用UTF-8，而我们windows窗口是GBK</p>
+<p>所以需要声明一下使用和mysql一致的mysql编码</p>
+<h2 id="更新表"><a href="#更新表" class="headerlink" title="更新表"></a>更新表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update msg set id = 2 centent = &apos;这是被修改的留言&apos; WHERE name= &apos;小李&apos;;</span><br></pre></td></tr></table></figure>
+<h2 id="表内插入多行"><a href="#表内插入多行" class="headerlink" title="表内插入多行"></a>表内插入多行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">insert into msg (id,title,name,content) values (3,&apos;标题3&apos;,&apos;名字3&apos;,&apos;内容3&apos;),</span><br><span class="line">(4,&apos;标题4&apos;,&apos;名字4&apos;,&apos;内容4&apos;),</span><br><span class="line">(5,&apos;标题5&apos;,&apos;名字5&apos;,&apos;内容5&apos;);</span><br></pre></td></tr></table></figure>
+<h2 id="删除表-1"><a href="#删除表-1" class="headerlink" title="删除表"></a>删除表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from msg;</span><br></pre></td></tr></table></figure>
+<h2 id="删除行"><a href="#删除行" class="headerlink" title="删除行"></a>删除行</h2><p>按条件删除第二行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from msg where id = 2;</span><br></pre></td></tr></table></figure>
+<h2 id="查询表语句"><a href="#查询表语句" class="headerlink" title="查询表语句"></a>查询表语句</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from msg</span><br></pre></td></tr></table></figure>
+<h2 id="查询部分行列"><a href="#查询部分行列" class="headerlink" title="查询部分行列"></a>查询部分行列</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select id,name from msg;</span><br></pre></td></tr></table></figure>
+<h2 id="小总结"><a href="#小总结" class="headerlink" title="小总结"></a>小总结</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select 控制列</span><br><span class="line"></span><br><span class="line">where 控制行</span><br></pre></td></tr></table></figure>
+
     </div>
 </article>
+
+
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -391,23 +432,23 @@
         <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
             <ul class="nav nav-pills pills-gal">
                 <li class="">
-                    <a href="/archives/2018/09/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2018/10/01/1-mysql入门增删改查/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 <li class="">
-                    <a href="/archives/2018/09/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2018/10/01/1-mysql入门增删改查/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 <li class="">
-                    <a href="/archives/2018/09/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2018/10/01/1-mysql入门增删改查/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
             </ul>
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/mysql/" style="font-size: 15.012691877872356px;" class="tag-cloud-link">mysql</a>
+    <a href="/tags/mysql/" style="font-size: 10.665436832282316px;" class="tag-cloud-link">mysql</a>
     
-    <a href="/tags/博客搭建/" style="font-size: 16.9083899202784px;" class="tag-cloud-link">博客搭建</a>
+    <a href="/tags/博客搭建/" style="font-size: 12.330186724920305px;" class="tag-cloud-link">博客搭建</a>
     
-    <a href="/tags/其他技术/" style="font-size: 17.152626097177656px;" class="tag-cloud-link">其他技术</a>
+    <a href="/tags/其他技术/" style="font-size: 14.485860936128981px;" class="tag-cloud-link">其他技术</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
