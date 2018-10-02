@@ -12,7 +12,7 @@
     
     
     
-    <title>2.mysql类型详解 | StartZYP_Blog_技术</title>
+    <title>categories: 其他技术 | StartZYP_Blog_技术</title>
     <link href=”https://startzyp.github.io“ rel=”prefetch” />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -206,38 +206,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    
-<article class="article well article-body" id="article">
+                    <article class="article well article-body" id="article-category">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="https://startzyp.github.io">StartZYP_Blog_技术</a>
         >
-        <span>2.mysql类型详解</span>
+        <span>目录</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/2018/10/01/2-mysql类型详解/">2.mysql类型详解</a>
+                <a href="/categories/其他技术/index.html">其他技术</a>
             </h1>
-        </div>
-        <div class="tag-article">
-            
-            <span class="label label-gal">
-                <i class="fa fa-tags"></i>
-                
-                <a href="/tags/mysql/">mysql</a>
-                
-            </span>
-            
-            <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2018-10-01
-            </span>
-            
-            <span class="label label-gal">
-                <i class="fa fa-eye"></i>
-            </span>
-            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -245,135 +226,21 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/2018/10/01/2-mysql类型详解/">2.mysql类型详解</a>
+                    <a href="/categories/其他技术/index.html">其他技术</a>
                 </h4>
             </div>
-            <p>
-                <i class="fa fa-calendar"></i> 2018-10-01
-            </p>
-            <p>
-                
-                <i class="fa fa-tags"></i>
-                
-                <a href="/tags/mysql/">mysql</a>
-                
-                
-                
-                <i class="fa fa-eye"></i>
-                
-            </p>
         </center>
     </div>
-    <div class="content-article">
-        <h1 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h1><table>
-<thead>
-<tr>
-<th>类型</th>
-<th>字节</th>
-<th>位</th>
-<th>无符号</th>
-<th>有符号</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Tinyint</td>
-<td>1</td>
-<td>8</td>
-<td>0-&gt;2^8-1</td>
-<td>-2^7-&gt;2^7-1</td>
-</tr>
-<tr>
-<td>Smallint</td>
-<td>2</td>
-<td>16</td>
-<td>0-&gt;2^16-1</td>
-<td>-2^15-&gt;+2^15-1</td>
-</tr>
-<tr>
-<td>Mediurnit</td>
-<td>3</td>
-<td>24</td>
-<td>0-&gt;2^24-1</td>
-<td>2^23-&gt;+2^23-1</td>
-</tr>
-<tr>
-<td>int</td>
-<td>4</td>
-<td>32</td>
-<td>0-&gt;2^32-1</td>
-<td>-2^31-&gt;2^31-1</td>
-</tr>
-</tbody>
-</table>
-<p>unsignde 无符号值，影响存储范围</p>
-<p>Zerofill:零填充，宽度一样，默认无符号</p>
-<p>default:列的默认值,推荐声明默认值</p>
-<p>Not null default 0 不能为空默认为0</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table class add age tinyint not null default 0;</span><br></pre></td></tr></table></figure>
-<h1 id="浮点型与定点类"><a href="#浮点型与定点类" class="headerlink" title="浮点型与定点类"></a>浮点型与定点类</h1><p>float(M,D)</p>
-<p>decimal(M,D)</p>
-<p>M： 为精度（总位数,不包含点）</p>
-<p>D：标度（小数位）</p>
-<p>如</p>
-<p>float(6,2)</p>
-<p>最大能存储 9999.99 最小-9999.99</p>
-<p>unsigned 也只能存储 0-9999.99 （没有反码补码）</p>
-<h1 id="字符串类型"><a href="#字符串类型" class="headerlink" title="字符串类型"></a>字符串类型</h1><table>
-<thead>
-<tr>
-<th>类型</th>
-<th>说明</th>
-<th>典型声明方式</th>
-<th>范围</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>char</td>
-<td>定长字符串</td>
-<td>gender char(1)</td>
-<td>Char(M) 0&lt;=M&lt;=255</td>
-</tr>
-<tr>
-<td>Varchar</td>
-<td>变长字符串</td>
-<td>email varchar(20)</td>
-<td>Varchar(M) 0&lt;=M&lt;=65535</td>
-</tr>
-<tr>
-<td>text</td>
-<td>文本串</td>
-<td>centent text</td>
-<td>约2W–6W个字符 （受字符集影响）</td>
-</tr>
-</tbody>
-</table>
-<p>区别</p>
-<p>char:定长:M个字符，如果存定小于M个字符，实占M个字符</p>
-<p>Varchar:M个字符，存的小于M个字符，设为N，则实占N+1-2个字符</p>
-<p>速度上：定长快一些</p>
-<p>如：</p>
-<p>1.空间利用率，四字成语表，char(4)</p>
-<p>网站个人简介用varchar(100)</p>
-<h1 id="日期时间类型"><a href="#日期时间类型" class="headerlink" title="日期时间类型"></a>日期时间类型</h1><p>Date 日期</p>
-<p>Time 时间</p>
-<p>Datetime 日期时间类型  </p>
-<p>Year 年类型</p>
-<p>时间戳:</p>
-<p>一般存储注册时间，并不上用datetime存储，而是用时间戳，</p>
-<p>因为datetime虽然直观，但是计算不方便</p>
-<h1 id="建表小练习"><a href="#建表小练习" class="headerlink" title="建表小练习"></a>建表小练习</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">给一个班级建立档案表</span><br><span class="line">info：</span><br><span class="line">姓名</span><br><span class="line">年龄</span><br><span class="line">email</span><br><span class="line">手机号</span><br><span class="line">简介</span><br><span class="line">毕业薪水</span><br><span class="line">入学时间</span><br></pre></td></tr></table></figure>
-<p>开始建表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">create table studentclass(</span><br><span class="line">    id int primary key auto_increment,</span><br><span class="line">	name char(20) not null default &apos;&apos;,</span><br><span class="line">	age tinyint unsigned not null default 0,</span><br><span class="line">	email varchar(30) not null default &apos;&apos;,</span><br><span class="line">	tel char(18) not null default &apos;&apos;,</span><br><span class="line">	info varchar(1000) not null default &apos;&apos;,</span><br><span class="line">	money decimal(8,2) unsigned not null default 0,</span><br><span class="line">	datetime int not null default 0</span><br><span class="line">)charset utf8;</span><br></pre></td></tr></table></figure>
-<p>主键 自增长 </p>
-<p>源数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">id int primary key auto_increment,</span><br></pre></td></tr></table></figure>
-
+    <div class="content-article" style="margin-top: 30px;">
+        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
+            
+            <a href="/2018/09/28/科普向IC卡分类/">科普向IC卡分类</a>
+            <br>
+            
+            
+        </div>
     </div>
 </article>
-
-
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -562,23 +429,23 @@
         <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
             <ul class="nav nav-pills pills-gal">
                 <li class="">
-                    <a href="/2018/10/01/2-mysql类型详解/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/categories/其他技术/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 <li class="">
-                    <a href="/2018/10/01/2-mysql类型详解/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/categories/其他技术/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 <li class="">
-                    <a href="/2018/10/01/2-mysql类型详解/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/categories/其他技术/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
             </ul>
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/mysql/" style="font-size: 16.829924966812058px;" class="tag-cloud-link">mysql</a>
+    <a href="/tags/mysql/" style="font-size: 9.215181240883304px;" class="tag-cloud-link">mysql</a>
     
-    <a href="/tags/博客搭建/" style="font-size: 16.252202991218365px;" class="tag-cloud-link">博客搭建</a>
+    <a href="/tags/博客搭建/" style="font-size: 14.220023714898261px;" class="tag-cloud-link">博客搭建</a>
     
-    <a href="/tags/其他技术/" style="font-size: 14.603881336105585px;" class="tag-cloud-link">其他技术</a>
+    <a href="/tags/其他技术/" style="font-size: 10.852357368932104px;" class="tag-cloud-link">其他技术</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
