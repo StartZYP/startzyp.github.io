@@ -2,6 +2,7 @@
 title: 2.mysql类型详解
 date: 2018-10-01 13:16:47
 tags: mysql
+categories: mysql
 preview: https://startzyp.github.io/imgs/log/2018-10-01/1.png
 ---
 

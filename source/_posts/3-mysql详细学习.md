@@ -2,6 +2,7 @@
 title: 3.mysql详细学习
 date: 2018-10-02 10:23:50
 tags: mysql
+categories: mysql
 preview: https://startzyp.github.io/imgs/log/2018-10-01/1.png
 ---
 

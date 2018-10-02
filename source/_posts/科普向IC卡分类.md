@@ -2,6 +2,7 @@
 title: 科普向IC卡分类
 date: 2018-09-28 23:10:23
 tags: 其他技术
+categories: 其他技术
 preview: https://StartZYP.github.io/imgs/log/2018-9-28/ICCard.jpg
 ---
 

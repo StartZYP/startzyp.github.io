@@ -2,6 +2,7 @@
 title: 2.让Hexo再也不丢失-备份github
 date: 2018-10-02 23:21:29
 tags: 博客搭建
+categories: 博客搭建
 ---
 
 ### 备份Hexo博客

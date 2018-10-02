@@ -2,6 +2,7 @@
 title: 1.mysql入门增删改查
 date: 2018-10-01 11:14:28
 tags: mysql
+categories: mysql
 preview: https://startzyp.github.io/imgs/log/2018-10-01/1.png
 ---
 
