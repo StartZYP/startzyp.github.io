@@ -12,7 +12,7 @@
     
     
     
-    <title>本地博客搭建教程 | StartZYP_Blog_技术</title>
+    <title>4.查询花式玩法 | StartZYP_Blog_技术</title>
     <link href=”https://startzyp.github.io“ rel=”prefetch” />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -204,13 +204,13 @@
         <i class="fa fa-home"></i>
         <a href="https://startzyp.github.io">StartZYP_Blog_技术</a>
         >
-        <span>本地博客搭建教程</span>
+        <span>4.查询花式玩法</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/2018/09/28/博客搭建教程/">本地博客搭建教程</a>
+                <a href="/2018/10/02/4-查询花式玩法/">4.查询花式玩法</a>
             </h1>
         </div>
         <div class="tag-article">
@@ -218,12 +218,12 @@
             <span class="label label-gal">
                 <i class="fa fa-tags"></i>
                 
-                <a href="/tags/博客搭建/">博客搭建</a>
+                <a href="/tags/mysql/">mysql</a>
                 
             </span>
             
             <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2018-09-28
+                <i class="fa fa-calendar"></i> 2018-10-02
             </span>
             
             <span class="label label-gal">
@@ -237,17 +237,17 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/2018/09/28/博客搭建教程/">本地博客搭建教程</a>
+                    <a href="/2018/10/02/4-查询花式玩法/">4.查询花式玩法</a>
                 </h4>
             </div>
             <p>
-                <i class="fa fa-calendar"></i> 2018-09-28
+                <i class="fa fa-calendar"></i> 2018-10-02
             </p>
             <p>
                 
                 <i class="fa fa-tags"></i>
                 
-                <a href="/tags/博客搭建/">博客搭建</a>
+                <a href="/tags/mysql/">mysql</a>
                 
                 
                 
@@ -257,43 +257,83 @@
         </center>
     </div>
     <div class="content-article">
-        <h1 id="用Hexo在本地搭建一个博客"><a href="#用Hexo在本地搭建一个博客" class="headerlink" title="用Hexo在本地搭建一个博客"></a>用Hexo在本地搭建一个博客</h1><h2 id="1-环境部署"><a href="#1-环境部署" class="headerlink" title="1.环境部署"></a>1.环境部署</h2><p>1.安装Hexo</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://nodejs.cn/ 丢个链接自己装，傻瓜式安装</span><br></pre></td></tr></table></figure>
-<p>2.安装git</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://git-scm.com/downloads 安装毫无技术含量</span><br></pre></td></tr></table></figure>
-<p>3.使用npm安装Hexo</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli //一键搞定</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="2-快速开始"><a href="#2-快速开始" class="headerlink" title="2.快速开始"></a>2.快速开始</h2><p>1.进入命令行找到要部署Blog的路径</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo i blog //init的缩写 blog是项目名</span><br><span class="line">cd blog //切换到站点根目录</span><br><span class="line">hexo g //generetor的缩写</span><br><span class="line">hexo s //server的缩写</span><br></pre></td></tr></table></figure>
-<p>2.打开浏览器输入localhost:4000查看：</p>
-<p><img src="https://startzyp.github.io/imgs/log/2018-9-28/preview5.jpg" alt=""></p>
-<p>看到这个样子就说明成功了，这个就是hexo默认的博客主题。现在你已经可以在这个主题下写博客了。</p>
-<p>当然，我是不喜欢这样的，幸好，github上有大量的主题可供选择，这里我选择使用nexT主题。</p>
-<h2 id="3-选择主题–nexT"><a href="#3-选择主题–nexT" class="headerlink" title="3.选择主题–nexT"></a>3.选择主题–nexT</h2><h3 id="1-选择主题"><a href="#1-选择主题" class="headerlink" title="1.选择主题"></a>1.选择主题</h3><p>安装的过程就一行代码，你需要在博客根目录出打开命令行输入以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-<p>读者可以在<a href="https://hexo.io/themes/可以查看你喜欢的主题。" target="_blank" rel="noopener">https://hexo.io/themes/可以查看你喜欢的主题。</a> 这里我主要说下NexT主题的相关配置。其他主题可以多看看官方文档。</p>
-<p>完成后，打开 站点配置文件， 找到 theme 字段，并将其值更改为 next</p>
-<h3 id="2-在终端输入"><a href="#2-在终端输入" class="headerlink" title="2.在终端输入"></a>2.在终端输入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo clean  //清除缓存</span><br><span class="line">hexo g  //重新生成代码</span><br><span class="line">hexo s  //部署到本地</span><br><span class="line"></span><br><span class="line">//然后打开浏览器访问 localhost:4000 查看效果</span><br></pre></td></tr></table></figure>
-<p>在 站点根目录/themes/next/_congig.yml 文件中修改</p>
-<h2 id="4-将本地博客上传到github"><a href="#4-将本地博客上传到github" class="headerlink" title="4.将本地博客上传到github"></a>4.将本地博客上传到github</h2><p>进入github</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/ 甩个链接自己看着办</span><br></pre></td></tr></table></figure>
-<h3 id="1-创建一个新项目"><a href="#1-创建一个新项目" class="headerlink" title="1.创建一个新项目"></a>1.创建一个新项目</h3><p><img src="https://startzyp.github.io/imgs/log/2018-9-28/1.jpg" alt=""></p>
-<h3 id="2-按格式输入项目名称"><a href="#2-按格式输入项目名称" class="headerlink" title="2.按格式输入项目名称"></a>2.按格式输入项目名称</h3><p><img src="https://startzyp.github.io/imgs/log/2018-9-28/2.jpg" alt=""></p>
-<h3 id="3-点击设置-创建一个page"><a href="#3-点击设置-创建一个page" class="headerlink" title="3.点击设置 创建一个page"></a>3.点击设置 创建一个page</h3><p><img src="https://startzyp.github.io/imgs/log/2018-9-28/3.jpg" alt=""></p>
-<p><img src="https://startzyp.github.io/imgs/log/2018-9-28/4.jpg" alt=""></p>
-<p><img src="https://startzyp.github.io/imgs/log/2018-9-28/5.jpg" alt=""></p>
-<h3 id="4-选择一个主题，没什么用，反正马上就被覆盖掉了。"><a href="#4-选择一个主题，没什么用，反正马上就被覆盖掉了。" class="headerlink" title="4.选择一个主题，没什么用，反正马上就被覆盖掉了。"></a>4.选择一个主题，没什么用，反正马上就被覆盖掉了。</h3><p><img src="https://startzyp.github.io/imgs/log/2018-9-28/6.jpg" alt=""></p>
-<p>这个时候访问一下你的链接，应该可以看到效果</p>
-<h2 id="5-接下来将我们Hexo的代码部署到github上。"><a href="#5-接下来将我们Hexo的代码部署到github上。" class="headerlink" title="5.接下来将我们Hexo的代码部署到github上。"></a>5.接下来将我们Hexo的代码部署到github上。</h2><p><img src="https://startzyp.github.io/imgs/log/2018-9-28/7.png" alt=""></p>
-<p>改成这样就好了，记得保存 !注意！！！冒号的后面一定一定一定要有一个空格！！</p>
-<h2 id="6-安装部署插件"><a href="#6-安装部署插件" class="headerlink" title="6.安装部署插件"></a>6.安装部署插件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">//先装个插件压压惊</span><br><span class="line">hexo d  //  部署的命令</span><br><span class="line"></span><br><span class="line">//等一会就好了</span><br></pre></td></tr></table></figure>
-<h2 id="7-访问你的主页"><a href="#7-访问你的主页" class="headerlink" title="7.访问你的主页"></a>7.访问你的主页</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">StartZYP.github.io</span><br></pre></td></tr></table></figure>
-<h2 id="8-发布你的第一篇文章"><a href="#8-发布你的第一篇文章" class="headerlink" title="8.发布你的第一篇文章"></a>8.发布你的第一篇文章</h2><p>在博客目录下输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo new [可以写模板] &quot;postName&quot;</span><br><span class="line"> //hexo n 也可以 </span><br><span class="line"> //你自己的博客名称，名为postName.md的文件会建在目</span><br><span class="line"> //录/blog/source/_posts下。</span><br></pre></td></tr></table></figure>
-<p>文章编辑完成后，终端在根目录文件夹下，执行如下命令来发布:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g //生成静态页面</span><br><span class="line">hexo d //发布</span><br></pre></td></tr></table></figure>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">本次的教程就先到这里，这只是最基础的，对于主题，你还有更多的选择更多的设置，甚至自己写一个静态博客界面。撤了Hexo，你还可以用其他的方式来搭建。如果你不喜欢github提供的域名，你可以自己买一个域名做绑定，不过我觉得没啥必要，所以我就不写了，毕竟很多大的组织也直接用github.io。生活嘛，就是用来折腾的。</span><br></pre></td></tr></table></figure>
+        <h1 id="mysql语句运算符"><a href="#mysql语句运算符" class="headerlink" title="mysql语句运算符"></a>mysql语句运算符</h1><p>比较运算符</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>说明</th>
+<th>运算符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt; <br>&lt;=<br> = <br>in</td>
+<td>小于<br>小于或等于<br>等于<br>在集合内</td>
+<td>!= 或者&lt;&gt;<br>&gt;=<br>&gt;<br>between</td>
+<td>不等于<br>大于或等于<br>大于<br>在范围内</td>
+</tr>
+</tbody>
+</table>
+<p>例:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * from good where good_id = 3;</span><br></pre></td></tr></table></figure>
+<p>where 后面加比较运算符</p>
+<p>in 用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * from good where good_id in (2,5);</span><br></pre></td></tr></table></figure>
+<p>查询good 表中good_id 只要是 2或者5都可以满足条件</p>
+<p>between 用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from good where good_id between 1 and 8;</span><br></pre></td></tr></table></figure>
+<p>选择数据good_id满足1-8就可以显示</p>
+<p>逻辑运算符</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NOT或者!</td>
+<td>逻辑非</td>
+</tr>
+<tr>
+<td>OR或者\</td>
+<td>\</td>
+<td></td>
+<td>逻辑或</td>
+</tr>
+<tr>
+<td>AND或&amp;&amp;</td>
+<td>逻辑与</td>
+</tr>
+</tbody>
+</table>
+<p>例:</p>
+<p>查询商品id不为1 2 3得</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from good where good_id not in (1,2,3);</span><br></pre></td></tr></table></figure>
+<p>列:</p>
+<p>两个条件满足一个就行或运算符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Select * from good where good_id = 4 AND good_name = &apos;洗脚水&apos;;</span><br></pre></td></tr></table></figure>
+<h1 id="模糊查询-like关键字"><a href="#模糊查询-like关键字" class="headerlink" title="模糊查询 like关键字"></a>模糊查询 like关键字</h1><p>案例:想在表中查询”小米”开头的所有商品</p>
+<p>like -&gt; 像</p>
+<p>% 任意字符通配符</p>
+<p>_ 单个字符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from good where good_name like &apos;诺基亚%&apos;;</span><br></pre></td></tr></table></figure>
+<h1 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h1><p>查询每个栏目下面最贵的商品价格</p>
+<p>给cat_id进行分组 然后查询每个组中shop_price价格最高的</p>
+<p>最低则用min函数</p>
+<p>综合函数为sum函数</p>
+<p>avg求平均值函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select cat_id,max(shop_price) from goods group by cat_id;</span><br></pre></td></tr></table></figure>
+<h1 id="计算表中有多少行"><a href="#计算表中有多少行" class="headerlink" title="计算表中有多少行"></a>计算表中有多少行</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select count(*) from goods;</span><br></pre></td></tr></table></figure>
+<h1 id="按栏目查询最贵的商品"><a href="#按栏目查询最贵的商品" class="headerlink" title="按栏目查询最贵的商品"></a>按栏目查询最贵的商品</h1><p>将good_cat相同的分类为一组，得出每组最贵的商品</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select good_id,good_cat,max(good_price) from good group by good_cat;</span><br></pre></td></tr></table></figure>
+<h1 id="每个栏目下商品总数"><a href="#每个栏目下商品总数" class="headerlink" title="每个栏目下商品总数"></a>每个栏目下商品总数</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select good_cat,count(*) from good group by good_cat;</span><br></pre></td></tr></table></figure>
+<h1 id="栏目商品积压货款"><a href="#栏目商品积压货款" class="headerlink" title="栏目商品积压货款"></a>栏目商品积压货款</h1><p>as 可以给这列的结果取别名</p>
+<p>如 as jiya_money</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select good_cat,good_price * good_number as jiya_money from good group by good_cat;</span><br></pre></td></tr></table></figure>
 
     </div>
 </article>
@@ -487,23 +527,23 @@
         <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
             <ul class="nav nav-pills pills-gal">
                 <li class="">
-                    <a href="/2018/09/28/博客搭建教程/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2018/10/02/4-查询花式玩法/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 <li class="">
-                    <a href="/2018/09/28/博客搭建教程/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2018/10/02/4-查询花式玩法/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 <li class="">
-                    <a href="/2018/09/28/博客搭建教程/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2018/10/02/4-查询花式玩法/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
             </ul>
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/mysql/" style="font-size: 9.062014083528354px;" class="tag-cloud-link">mysql</a>
+    <a href="/tags/mysql/" style="font-size: 16.876164799350157px;" class="tag-cloud-link">mysql</a>
     
-    <a href="/tags/博客搭建/" style="font-size: 14.91122265492412px;" class="tag-cloud-link">博客搭建</a>
+    <a href="/tags/博客搭建/" style="font-size: 17.97657947467807px;" class="tag-cloud-link">博客搭建</a>
     
-    <a href="/tags/其他技术/" style="font-size: 18.421713322593845px;" class="tag-cloud-link">其他技术</a>
+    <a href="/tags/其他技术/" style="font-size: 8.130183649712711px;" class="tag-cloud-link">其他技术</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
