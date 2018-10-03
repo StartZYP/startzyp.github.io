@@ -12,7 +12,7 @@
     
     
     
-    <title>tags: 其他技术 | StartZYP_Blog_技术</title>
+    <title>5.having,limit,orderby使用详解 | StartZYP_Blog_技术</title>
     <link href=”https://startzyp.github.io“ rel=”prefetch” />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -206,19 +206,38 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <article class="article well article-body" id="article-tag">
+                    
+<article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="https://startzyp.github.io">StartZYP_Blog_技术</a>
         >
-        <span>标签</span>
+        <span>5.having,limit,orderby使用详解</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/tags/其他技术/index.html">其他技术</a>
+                <a href="/2018/10/03/5-having与limit使用详解/">5.having,limit,orderby使用详解</a>
             </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/mysql/">mysql</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2018-10-03
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -226,24 +245,47 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/tags/其他技术/index.html">其他技术</a>
+                    <a href="/2018/10/03/5-having与limit使用详解/">5.having,limit,orderby使用详解</a>
                 </h4>
             </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2018-10-03
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/mysql/">mysql</a>
+                
+                
+                
+                <i class="fa fa-eye"></i>
+                
+            </p>
         </center>
     </div>
-    <div class="content-article" style="margin-top: 30px;">
-        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
-            
-            <a href="/2018/10/03/esp8266刷wifi钓鱼固件/">esp8266刷wifi钓鱼固件</a>
-            <br>
-            
-            <a href="/2018/09/28/科普向IC卡分类/">科普向IC卡分类</a>
-            <br>
-            
-            
-        </div>
+    <div class="content-article">
+        <h1 id="having详解"><a href="#having详解" class="headerlink" title="having详解"></a>having详解</h1><p>having关键字在select 和where 之后</p>
+<p>where 和select 称为查询</p>
+<p>having是查询结果后的筛选</p>
+<p>如</p>
+<p>查询商店所有商品卖价与商城相比能省200以上的商品.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select goods_id,goods_name,shop_price - goods_price as sheng having sheng &gt; 200;</span><br></pre></td></tr></table></figure>
+<p>如图</p>
+<p><img src="https://startzyp.github.io/imgs/log/2018-10-03/1.png" alt=""></p>
+<p>同上题,只查询第个栏目下比市场低200元以上的商品</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select goods_id,goods_chat,goods_name,shop_price - goods_price as sheng where goods_chat = 3 having sheng &gt;200;</span><br></pre></td></tr></table></figure>
+<p>查询积压货款超过2W点栏目。以及该栏目积压的货款</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select cat_id,sum(goods_price * goods_num) as jiya from goods group by cat_id having jiya &gt;20000;</span><br></pre></td></tr></table></figure>
+<p><img src="https://startzyp.github.io/imgs/log/2018-10-03/2.png" alt=""></p>
+<p>题目如上图</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 姓名,科目, sum(分数&lt; 60 ) as bujigenum,avg(分数) as pjfen from stu group by 姓名 having bujigenum &gt;=2;</span><br></pre></td></tr></table></figure>
+<p>不用左链接，不用子查询写法</p>
+<h1 id="orderby排序"><a href="#orderby排序" class="headerlink" title="orderby排序"></a>orderby排序</h1>
     </div>
 </article>
+
+
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -432,23 +474,23 @@
         <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
             <ul class="nav nav-pills pills-gal">
                 <li class="">
-                    <a href="/tags/其他技术/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2018/10/03/5-having与limit使用详解/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 <li class="">
-                    <a href="/tags/其他技术/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2018/10/03/5-having与limit使用详解/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 <li class="">
-                    <a href="/tags/其他技术/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2018/10/03/5-having与limit使用详解/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
             </ul>
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/mysql/" style="font-size: 10.11284944965117px;" class="tag-cloud-link">mysql</a>
+    <a href="/tags/mysql/" style="font-size: 11.62068261172231px;" class="tag-cloud-link">mysql</a>
     
-    <a href="/tags/博客搭建/" style="font-size: 15.140935833307196px;" class="tag-cloud-link">博客搭建</a>
+    <a href="/tags/博客搭建/" style="font-size: 14.134026339745763px;" class="tag-cloud-link">博客搭建</a>
     
-    <a href="/tags/其他技术/" style="font-size: 9.07817188954117px;" class="tag-cloud-link">其他技术</a>
+    <a href="/tags/其他技术/" style="font-size: 15.272954398781568px;" class="tag-cloud-link">其他技术</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
