@@ -198,6 +198,14 @@
                 </li>
                 
                 
+                
+                <li class="">
+                    <a href="/mikutap">
+                        <i class="fa fa-archive"></i>解压web
+                    </a>
+                </li>
+                
+                
             </ul>
         </div>
     </div>
@@ -281,7 +289,13 @@
 <p>题目如上图</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 姓名,科目, sum(分数&lt; 60 ) as bujigenum,avg(分数) as pjfen from stu group by 姓名 having bujigenum &gt;=2;</span><br></pre></td></tr></table></figure>
 <p>不用左链接，不用子查询写法</p>
-<h1 id="orderby排序"><a href="#orderby排序" class="headerlink" title="orderby排序"></a>orderby排序</h1>
+<h1 id="order-by排序"><a href="#order-by排序" class="headerlink" title="order by排序"></a>order by排序</h1><p>order by 可以按多字段排序,order by 列1 [desc\asc],列2 [desc/asc]</p>
+<h1 id="limit-限制几行"><a href="#limit-限制几行" class="headerlink" title="limit 限制几行"></a>limit 限制几行</h1><p>limit放在语句最后，起到限制条目的作用</p>
+<p>limit [offset,]N</p>
+<p>offset:偏移量</p>
+<p>N:取出条目</p>
+<p>offset:如果不写，则相当于 limit 0,N</p>
+
     </div>
 </article>
 
@@ -340,6 +354,12 @@
             <i class="fa fa-chevron-circle-up panel-toggle"></i>
         </div>
         <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/10/04/6-where-from-exits子查询/">6.where,from,exits子查询</a>
+                </span>
+            </li>
             
             <li class="list-group-item">
                 <span class="post-title">
@@ -413,6 +433,18 @@
             
             <li class="list-group-item">
                 <span class="post-title">
+                    <a href="/2018/10/01/1-mysql入门增删改查/">1.mysql入门增删改查</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/28/1-博客搭建教程/">1.本地博客搭建教程</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
                     <a href="/2018/10/01/2-mysql类型详解/">2.mysql类型详解</a>
                 </span>
             </li>
@@ -437,31 +469,25 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/10/03/esp8266刷wifi钓鱼固件/">esp8266刷wifi钓鱼固件</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
                     <a href="/2018/10/03/5-having与limit使用详解/">5.having,limit,orderby使用详解</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/09/28/1-博客搭建教程/">1.本地博客搭建教程</a>
+                    <a href="/2018/10/04/6-where-from-exits子查询/">6.where,from,exits子查询</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/10/03/esp8266刷wifi钓鱼固件/">esp8266刷wifi钓鱼固件</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
                     <a href="/2018/09/28/科普向IC卡分类/">科普向IC卡分类</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/10/01/1-mysql入门增删改查/">1.mysql入门增删改查</a>
                 </span>
             </li>
             
@@ -486,11 +512,11 @@
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/mysql/" style="font-size: 14.46713846108518px;" class="tag-cloud-link">mysql</a>
+    <a href="/tags/mysql/" style="font-size: 15.655021162085815px;" class="tag-cloud-link">mysql</a>
     
-    <a href="/tags/博客搭建/" style="font-size: 11.678462074740862px;" class="tag-cloud-link">博客搭建</a>
+    <a href="/tags/博客搭建/" style="font-size: 11.578268736393515px;" class="tag-cloud-link">博客搭建</a>
     
-    <a href="/tags/其他技术/" style="font-size: 8.89352758996484px;" class="tag-cloud-link">其他技术</a>
+    <a href="/tags/其他技术/" style="font-size: 13.950407760951581px;" class="tag-cloud-link">其他技术</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
