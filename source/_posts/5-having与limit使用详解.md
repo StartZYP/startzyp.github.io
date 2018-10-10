@@ -47,5 +47,19 @@ select 姓名,科目, sum(分数< 60 ) as bujigenum,avg(分数) as pjfen from st
 
 不用左链接，不用子查询写法
 
-# orderby排序
+# order by排序
+
+order by 可以按多字段排序,order by 列1 [desc\asc],列2 [desc/asc]
+
+# limit 限制几行
+
+limit放在语句最后，起到限制条目的作用
+
+limit [offset,]N
+
+offset:偏移量
+
+N:取出条目
+
+offset:如果不写，则相当于 limit 0,N
 
