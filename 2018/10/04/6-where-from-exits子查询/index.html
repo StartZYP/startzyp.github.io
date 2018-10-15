@@ -142,11 +142,11 @@
                         
                         
                         <li>
-                            <a href="/categories/博客搭建/">博客搭建</a>
+                            <a href="/categories/mysql/">mysql</a>
                         </li>
                         
                         <li>
-                            <a href="/categories/mysql/">mysql</a>
+                            <a href="/categories/博客搭建/">博客搭建</a>
                         </li>
                         
                         <li>
@@ -172,11 +172,11 @@
                         
                         
                         <li>
-                            <a href="/tags/博客搭建/">博客搭建</a>
+                            <a href="/tags/mysql/">mysql</a>
                         </li>
                         
                         <li>
-                            <a href="/tags/mysql/">mysql</a>
+                            <a href="/tags/博客搭建/">博客搭建</a>
                         </li>
                         
                         <li>
@@ -291,6 +291,8 @@
 <p>from子查询解决上面问题<br>如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select tmp.article_id,tmp.article_content,article_comments from ( select * from article order by articlecategory_id,article_comments desc ) as tmp group by tmp.articlecategory_id;</span><br></pre></td></tr></table></figure>
 <h1 id="Exists子查询"><a href="#Exists子查询" class="headerlink" title="Exists子查询"></a>Exists子查询</h1><p>把外层的查询结果，拿到内层，看内层的查询是否成立</p>
+<p>查询有商品的栏目</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select goods_cat,goods_info,goods_id from goods where exists (select * from category where goods.cat_id=category.cat_id);</span><br></pre></td></tr></table></figure>
 
     </div>
 </article>
@@ -429,13 +431,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/09/28/1-博客搭建教程/">1.本地博客搭建教程</a>
+                    <a href="/2018/10/01/1-mysql入门增删改查/">1.mysql入门增删改查</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/10/01/2-mysql类型详解/">2.mysql类型详解</a>
+                    <a href="/2018/09/28/1-博客搭建教程/">1.本地博客搭建教程</a>
                 </span>
             </li>
             
@@ -447,13 +449,19 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/10/01/1-mysql入门增删改查/">1.mysql入门增删改查</a>
+                    <a href="/2018/10/02/4-查询花式玩法/">4.查询花式玩法</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
                     <a href="/2018/10/02/3-mysql详细学习/">3.mysql详细学习</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/10/03/esp8266刷wifi钓鱼固件/">esp8266刷wifi钓鱼固件</a>
                 </span>
             </li>
             
@@ -477,13 +485,7 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/10/03/esp8266刷wifi钓鱼固件/">esp8266刷wifi钓鱼固件</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/10/02/4-查询花式玩法/">4.查询花式玩法</a>
+                    <a href="/2018/10/01/2-mysql类型详解/">2.mysql类型详解</a>
                 </span>
             </li>
             
@@ -508,11 +510,11 @@
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/博客搭建/" style="font-size: 12.570435170437165px;" class="tag-cloud-link">博客搭建</a>
+    <a href="/tags/mysql/" style="font-size: 10.276959991806502px;" class="tag-cloud-link">mysql</a>
     
-    <a href="/tags/mysql/" style="font-size: 13.881457271905454px;" class="tag-cloud-link">mysql</a>
+    <a href="/tags/博客搭建/" style="font-size: 18.140043451660695px;" class="tag-cloud-link">博客搭建</a>
     
-    <a href="/tags/其他技术/" style="font-size: 8.015691444755355px;" class="tag-cloud-link">其他技术</a>
+    <a href="/tags/其他技术/" style="font-size: 17.456010051926583px;" class="tag-cloud-link">其他技术</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
