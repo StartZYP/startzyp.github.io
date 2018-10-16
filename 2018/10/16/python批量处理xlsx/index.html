@@ -12,7 +12,7 @@
     
     
     
-    <title>tags: mysql | StartZYP_Blog_技术</title>
+    <title>python批量处理xlsx | StartZYP_Blog_技术</title>
     <link href=”https://startzyp.github.io“ rel=”prefetch” />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -222,19 +222,38 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <article class="article well article-body" id="article-tag">
+                    
+<article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="https://startzyp.github.io">StartZYP_Blog_技术</a>
         >
-        <span>标签</span>
+        <span>python批量处理xlsx</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/tags/mysql/index.html">mysql</a>
+                <a href="/2018/10/16/python批量处理xlsx/">python批量处理xlsx</a>
             </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/python/">python</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2018-10-16
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -242,36 +261,45 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/tags/mysql/index.html">mysql</a>
+                    <a href="/2018/10/16/python批量处理xlsx/">python批量处理xlsx</a>
                 </h4>
             </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2018-10-16
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/python/">python</a>
+                
+                
+                
+                <i class="fa fa-eye"></i>
+                
+            </p>
         </center>
     </div>
-    <div class="content-article" style="margin-top: 30px;">
-        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
-            
-            <a href="/2018/10/04/6-where-from-exits子查询/">6.where,from,exits子查询</a>
-            <br>
-            
-            <a href="/2018/10/03/5-having与limit使用详解/">5.having,limit,orderby使用详解</a>
-            <br>
-            
-            <a href="/2018/10/02/4-查询花式玩法/">4.查询花式玩法</a>
-            <br>
-            
-            <a href="/2018/10/02/3-mysql详细学习/">3.mysql详细学习</a>
-            <br>
-            
-            <a href="/2018/10/01/2-mysql类型详解/">2.mysql类型详解</a>
-            <br>
-            
-            <a href="/2018/10/01/1-mysql入门增删改查/">1.mysql入门增删改查</a>
-            <br>
-            
-            
-        </div>
+    <div class="content-article">
+        <h2 id="批量处理xlsx"><a href="#批量处理xlsx" class="headerlink" title="批量处理xlsx"></a>批量处理xlsx</h2><p>针对excel读取操作</p>
+<p>使用python的openpyxl模块中的load_workbook</p>
+<p>加载xlsx文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wb = load_workbook(filename=file_name)</span><br></pre></td></tr></table></figure>
+<p>选择页</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sheet_ranges = wb[<span class="string">'Sheet1'</span>]</span><br></pre></td></tr></table></figure>
+<p>取出B1单元的值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sheet_ranges[<span class="string">'B1'</span>].value</span><br></pre></td></tr></table></figure>
+<p>修改Xlsx，同样选择页面</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ws = wb[<span class="string">'Sheet1'</span>]</span><br></pre></td></tr></table></figure>
+<p>修改表格单元</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ws[<span class="string">"I2"</span>] =<span class="string">"这是修改内容"</span></span><br></pre></td></tr></table></figure>
+<p>最后记住保存</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wb.save(file_name)</span><br></pre></td></tr></table></figure>
+
     </div>
 </article>
+
+
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -435,6 +463,12 @@
             
             <li class="list-group-item">
                 <span class="post-title">
+                    <a href="/2018/10/16/python批量处理xlsx/">python批量处理xlsx</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
                     <a href="/2018/09/28/科普向IC卡分类/">科普向IC卡分类</a>
                 </span>
             </li>
@@ -457,12 +491,6 @@
                 </span>
             </li>
             
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/10/02/4-查询花式玩法/">4.查询花式玩法</a>
-                </span>
-            </li>
-            
         </ul>
     </div>
 </aside>
@@ -472,25 +500,25 @@
         <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
             <ul class="nav nav-pills pills-gal">
                 <li class="">
-                    <a href="/tags/mysql/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2018/10/16/python批量处理xlsx/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 <li class="">
-                    <a href="/tags/mysql/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2018/10/16/python批量处理xlsx/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 <li class="">
-                    <a href="/tags/mysql/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2018/10/16/python批量处理xlsx/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
             </ul>
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/mysql/" style="font-size: 8.822622023988767px;" class="tag-cloud-link">mysql</a>
+    <a href="/tags/mysql/" style="font-size: 14.06103141161111px;" class="tag-cloud-link">mysql</a>
     
-    <a href="/tags/博客搭建/" style="font-size: 9.377147125634442px;" class="tag-cloud-link">博客搭建</a>
+    <a href="/tags/博客搭建/" style="font-size: 9.975306011770451px;" class="tag-cloud-link">博客搭建</a>
     
-    <a href="/tags/python/" style="font-size: 12.543618000343272px;" class="tag-cloud-link">python</a>
+    <a href="/tags/python/" style="font-size: 10.858378578015518px;" class="tag-cloud-link">python</a>
     
-    <a href="/tags/其他技术/" style="font-size: 9.94132115240513px;" class="tag-cloud-link">其他技术</a>
+    <a href="/tags/其他技术/" style="font-size: 13.153679861829676px;" class="tag-cloud-link">其他技术</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
