@@ -12,7 +12,7 @@
     
     
     
-    <title>7.mysql中union使用方法 | StartZYP_Blog_技术</title>
+    <title>archive_a | StartZYP_Blog_技术</title>
     <link href=”https://startzyp.github.io“ rel=”prefetch” />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -79,7 +79,7 @@
             <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
             <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
             
-            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            <a href="/archives/2018/10/" class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
             
         </div>
         <audio id="audio" src="/imgs/oni.mp3"></audio>
@@ -123,7 +123,7 @@
                 
                 
                 
-                <li class="">
+                <li class="current">
                     <a href="/archives">
                         <i class="fa fa-archive"></i>归档
                     </a>
@@ -222,38 +222,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    
-<article class="article well article-body" id="article">
+                    <article class="article well article-body" id="article-archive">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="https://startzyp.github.io">StartZYP_Blog_技术</a>
         >
-        <span>7.mysql中union使用方法</span>
+        <span>归档</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/2018/10/19/7-mysql中union使用方法/">7.mysql中union使用方法</a>
+                <a href="/archives">归档</a>
             </h1>
-        </div>
-        <div class="tag-article">
-            
-            <span class="label label-gal">
-                <i class="fa fa-tags"></i>
-                
-                <a href="/tags/mysql/">mysql</a>
-                
-            </span>
-            
-            <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2018-10-19
-            </span>
-            
-            <span class="label label-gal">
-                <i class="fa fa-eye"></i>
-            </span>
-            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -261,80 +242,75 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/2018/10/19/7-mysql中union使用方法/">7.mysql中union使用方法</a>
+                    <a href="/archives">归档</a>
                 </h4>
             </div>
-            <p>
-                <i class="fa fa-calendar"></i> 2018-10-19
-            </p>
-            <p>
-                
-                <i class="fa fa-tags"></i>
-                
-                <a href="/tags/mysql/">mysql</a>
-                
-                
-                
-                <i class="fa fa-eye"></i>
-                
-            </p>
         </center>
     </div>
-    <div class="content-article">
-        <h1 id="union使用方法"><a href="#union使用方法" class="headerlink" title="union使用方法"></a>union使用方法</h1><p>union:联合</p>
-<p>作用：把两次或多次查询结果合并起来</p>
-<p>要求：两次查询的列数一致</p>
-<p>推荐：查询的每一列，相对应的列类型也一样</p>
-<p>可以来自多张表</p>
-<p>多次sql语句取出的列名可以不一致，此时以第一次sql的列名为准</p>
-<p>ta</p>
-<p>id,num</p>
-<p>a,5</p>
-<p>b,10</p>
-<p>c,15</p>
-<p>d,10</p>
-<p>tb</p>
-<p>id,num</p>
-<p>b,5</p>
-<p>c,10</p>
-<p>d,28</p>
-<p>e,99</p>
-<p>create table ta(</p>
-<p>in char(1),</p>
-<p>num int</p>
-<p>)</p>
-<p>insert into ta</p>
-<p>values</p>
-<p>(‘a’,5),</p>
-<p>(‘b’,10),</p>
-<p>(‘c’,15),</p>
-<p>(‘d’,10);</p>
-<p>insert into tb</p>
-<p>values</p>
-<p>(‘b’,5),</p>
-<p>(‘c’,10),</p>
-<p>(‘d’,20),</p>
-<p>(‘e’,99);</p>
-<p>想得到结果</p>
-<p>a,5</p>
-<p>b,16</p>
-<p>c,25</p>
-<p>d,30</p>
-<p>e,99</p>
-<p>合并查询</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select * from ta </span><br><span class="line"></span><br><span class="line">union</span><br><span class="line"></span><br><span class="line">select * from tb;</span><br></pre></td></tr></table></figure>
-<p>sum group求和</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select id,sum(num) from select(select * from ta </span><br><span class="line"> union select * from tb;) as newtable group by id;</span><br></pre></td></tr></table></figure>
-<p>如果不同的语句中取出来的行 有完全相同（每个列的值都相同）</p>
-<p>那么相同的行会合并（去重复）</p>
-<p>如果不去重复可以加all来合并</p>
-<p>如果子句中有order by ,limit 必须加(),推荐放在 所有子句之后 最最终合并后的结果来排序</p>
-<p>在子句中 order by 配合limit使用才有意义,如果order by 不与limit 使用会被语法分析器优化的时候去除 </p>
-
+    <div class="content-article" style="margin-top: 30px;">
+        
+        
+            <h1 style="font-size: 24px; margin-top: 40px;">2018年</h1>
+            
+        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
+            
+             
+             
+                        <a href="/2018/10/27/8-mysql左右连接内连/">8.mysql左右连接内连</a>
+                        <br>
+            
+             
+                        <a href="/2018/10/19/7-mysql中union使用方法/">7.mysql中union使用方法</a>
+                        <br>
+            
+             
+                        <a href="/2018/10/16/python批量处理xlsx/">python批量处理xlsx</a>
+                        <br>
+            
+             
+                        <a href="/2018/10/04/6-where-from-exits子查询/">6.where,from,exits子查询</a>
+                        <br>
+            
+             
+                        <a href="/2018/10/03/esp8266刷wifi钓鱼固件/">esp8266刷wifi钓鱼固件</a>
+                        <br>
+            
+             
+                        <a href="/2018/10/03/5-having与limit使用详解/">5.having,limit,orderby使用详解</a>
+                        <br>
+            
+             
+                        <a href="/2018/10/02/2-让Hexo再也不丢失-备份github/">2.让Hexo再也不丢失-备份github</a>
+                        <br>
+            
+             
+                        <a href="/2018/10/02/4-查询花式玩法/">4.查询花式玩法</a>
+                        <br>
+            
+             
+                        <a href="/2018/10/02/3-mysql详细学习/">3.mysql详细学习</a>
+                        <br>
+            
+             
+                        <a href="/2018/10/01/2-mysql类型详解/">2.mysql类型详解</a>
+                        <br>
+            
+             
+                        <a href="/2018/10/01/1-mysql入门增删改查/">1.mysql入门增删改查</a>
+                        <br>
+            
+             
+                        <a href="/2018/09/28/科普向IC卡分类/">科普向IC卡分类</a>
+                        <br>
+            
+             
+                        <a href="/2018/09/28/1-博客搭建教程/">1.本地博客搭建教程</a>
+                        <br>
+            
+                    </div>
+        
     </div>
 </article>
-
-
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -480,13 +456,19 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/10/02/3-mysql详细学习/">3.mysql详细学习</a>
+                    <a href="/2018/09/28/1-博客搭建教程/">1.本地博客搭建教程</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/10/02/4-查询花式玩法/">4.查询花式玩法</a>
+                    <a href="/2018/10/02/2-让Hexo再也不丢失-备份github/">2.让Hexo再也不丢失-备份github</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/10/02/3-mysql详细学习/">3.mysql详细学习</a>
                 </span>
             </li>
             
@@ -510,13 +492,7 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/10/27/8-mysql左右连接内连/">8.mysql左右连接内连</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/10/16/python批量处理xlsx/">python批量处理xlsx</a>
+                    <a href="/2018/10/19/7-mysql中union使用方法/">7.mysql中union使用方法</a>
                 </span>
             </li>
             
@@ -535,25 +511,25 @@
         <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
             <ul class="nav nav-pills pills-gal">
                 <li class="">
-                    <a href="/2018/10/19/7-mysql中union使用方法/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/archives/2018/10/page/2/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 <li class="">
-                    <a href="/2018/10/19/7-mysql中union使用方法/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/archives/2018/10/page/2/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 <li class="">
-                    <a href="/2018/10/19/7-mysql中union使用方法/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/archives/2018/10/page/2/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
             </ul>
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/mysql/" style="font-size: 15.488285885509594px;" class="tag-cloud-link">mysql</a>
+    <a href="/tags/mysql/" style="font-size: 16.761686743556552px;" class="tag-cloud-link">mysql</a>
     
-    <a href="/tags/博客搭建/" style="font-size: 8.31956730163869px;" class="tag-cloud-link">博客搭建</a>
+    <a href="/tags/博客搭建/" style="font-size: 10.056860359897941px;" class="tag-cloud-link">博客搭建</a>
     
-    <a href="/tags/其他技术/" style="font-size: 15.251755027139284px;" class="tag-cloud-link">其他技术</a>
+    <a href="/tags/其他技术/" style="font-size: 11.537890865427332px;" class="tag-cloud-link">其他技术</a>
     
-    <a href="/tags/python/" style="font-size: 9.949117109535564px;" class="tag-cloud-link">python</a>
+    <a href="/tags/python/" style="font-size: 15.166853301279964px;" class="tag-cloud-link">python</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
