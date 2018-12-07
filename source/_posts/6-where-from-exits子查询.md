@@ -60,3 +60,9 @@ select tmp.article_id,tmp.article_content,article_comments from ( select * from 
 
 把外层的查询结果，拿到内层，看内层的查询是否成立
 
+查询有商品的栏目
+
+```mysql
+select goods_cat,goods_info,goods_id from goods where exists (select * from category where goods.cat_id=category.cat_id);
+```
+
